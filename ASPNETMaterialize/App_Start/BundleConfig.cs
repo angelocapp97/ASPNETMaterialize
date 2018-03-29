@@ -23,9 +23,24 @@ namespace ASPNETMaterialize
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
+                      "~/Content/bootstrap.min.css"));
+
+            bundles.Add(new StyleBundle("~/Content/materialize").Include(
+                      "~/Content/materialize/css/materialize.min.css",
+                      "~/Content/materialize/css/materialize-custom.css"));
+
+            bundles.Add(new StyleBundle("~/Content/sidebar-fixed").Include(
+                      "~/Content/materialize/css/sidebar-fixed.css"));
+
+            bundles.Add(new StyleBundle("~/Content/nouislider").Include(
+                      "~/Content/materialize/nouislider/css/nouislider.min.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/materialize").Include(
+                      "~/Content/materialize/js/materialize.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/nouislider").Include(
+                      "~/Content/materialize/nouislider/js/nouislider.min.js"));
         }
     }
 }

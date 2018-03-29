@@ -20,7 +20,7 @@ namespace ASPNETMaterialize.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Contacts()
         {
             ViewBag.Message = "Your contact page.";
 

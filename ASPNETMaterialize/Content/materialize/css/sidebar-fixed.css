@@ -1,0 +1,23 @@
+﻿header, .body-content, footer {
+    padding-left: 300px;
+}
+
+@media only screen and (min-width : 993px) {
+    header .brand-logo {
+        padding-left: 30px;
+    }
+
+    .container {
+        width: 96%;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    header, .body-content, footer {
+        padding-left: 0;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
