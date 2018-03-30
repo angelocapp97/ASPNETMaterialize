@@ -23,8 +23,5 @@ git clone https://github.com/angelocapp97/ASPNETMaterialize.git
 ## Authors
 * **Angelo Cappelletti** - *Initial work* - [Visit](https://github.com/angelocapp97) github profile
 
-## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ## Acknowledgments
 * ASP.NET MVC 5
