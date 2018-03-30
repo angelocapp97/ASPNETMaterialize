@@ -9,7 +9,7 @@ Material Design Web App built with ASP.NET MVC 5
 You can get project solution simply cloning this repository through the command below:
 
 ```
-git clone https://github.com/angelocapp97/
+git clone https://github.com/angelocapp97/ASPNETMaterialize.git
 ```
 
 ### Prerequisites
