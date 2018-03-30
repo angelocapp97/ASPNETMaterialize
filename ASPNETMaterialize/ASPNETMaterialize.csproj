@@ -181,6 +181,7 @@
     </Content>
     <Content Include="Content\materialize\LICENSE" />
     <Content Include="Content\materialize\README.md" />
+    <None Include="Properties\PublishProfiles\MaterializeASPNET - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
