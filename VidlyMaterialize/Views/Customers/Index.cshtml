@@ -1,8 +1,55 @@
-﻿
+﻿@model IEnumerable<VidlyMaterialize.Models.Customer>
 @{
     ViewBag.Title = "Customers";
 }
 
 <div class="container row">
     <h2 class="header">@ViewBag.Title</h2>
+
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-content">
+                    @if (!Model.Any())
+                    {
+                        <p>We don't have any customers yet.</p>
+                    }
+                    else
+                    {
+                        <table class="highlight centered">
+                            <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Gender</th>
+                                    <th>Subscribed to NewsLetter</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var customer in Model)
+                                {
+                                    <tr>
+                                        <td>@customer.FirstName</td>
+                                        <td>@customer.LastName</td>
+                                        <td>@customer.GenderId</td>
+                                        <td>
+                                            @if (@customer.IsSubscribedToNewsletter)
+                                            {
+                                                <input type="checkbox" class="filled-in" checked="checked" />
+                                            }
+                                            else
+                                            {
+                                                <input type="checkbox" class="filled-in" />
+                                            }
+                                            <span>&nbsp</span>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
