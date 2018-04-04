@@ -158,6 +158,14 @@
     <Compile Include="Migrations\201804040912178_InitialModel.Designer.cs">
       <DependentUpon>201804040912178_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804040919483_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201804040919483_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201804040919483_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804040923020_AddGenderToCustomer.cs" />
+    <Compile Include="Migrations\201804040923020_AddGenderToCustomer.Designer.cs">
+      <DependentUpon>201804040923020_AddGenderToCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Gender.cs" />
@@ -247,6 +255,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201804040912178_InitialModel.resx">
       <DependentUpon>201804040912178_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804040919483_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201804040919483_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804040923020_AddGenderToCustomer.resx">
+      <DependentUpon>201804040923020_AddGenderToCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
