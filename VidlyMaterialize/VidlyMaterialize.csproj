@@ -166,6 +166,10 @@
     <Compile Include="Migrations\201804040923020_AddGenderToCustomer.Designer.cs">
       <DependentUpon>201804040923020_AddGenderToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804040925197_PopulateGenders.cs" />
+    <Compile Include="Migrations\201804040925197_PopulateGenders.Designer.cs">
+      <DependentUpon>201804040925197_PopulateGenders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Gender.cs" />
@@ -261,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804040923020_AddGenderToCustomer.resx">
       <DependentUpon>201804040923020_AddGenderToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804040925197_PopulateGenders.resx">
+      <DependentUpon>201804040925197_PopulateGenders.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
