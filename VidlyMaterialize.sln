@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNETMaterialize", "ASPNETMaterialize\ASPNETMaterialize.csproj", "{48E73D28-2788-4B9A-8BB3-543C4BC1C7A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VidlyMaterialize", "VidlyMaterialize\VidlyMaterialize.csproj", "{48E73D28-2788-4B9A-8BB3-543C4BC1C7A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

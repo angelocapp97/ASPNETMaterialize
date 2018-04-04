@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ASPNETMaterialize.Controllers
+namespace VidlyMaterialize.Controllers
 {
-    public class FormsController : Controller
+    public class CustomersController : Controller
     {
-        // GET: Forms
+        // GET: Customers
         public ActionResult Index()
         {
             return View();
