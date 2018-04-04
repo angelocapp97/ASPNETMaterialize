@@ -12,19 +12,22 @@ namespace VidlyMaterialize.Models
 
         [Required]
         [StringLength(255)]
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         [Required]
         [StringLength(255)]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
+        [Display(Name = "Date of Birth")]
         public DateTime? Birthdate { get; set; }
 
         [Required]
         public bool IsSubscribedToNewsletter { get; set; }
 
         [Required]
-        public Gender Gender { get; set; }
         public byte GenderId { get; set; }
+        public Gender Gender { get; set; }
     }
 }

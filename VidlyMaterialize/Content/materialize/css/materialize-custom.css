@@ -6,3 +6,11 @@
 .card-reveal {
     height: 101% !important;
 }
+
+.field-validation-error {
+    color: red;
+}
+
+.input-validation-error {
+    border-bottom: 1px solid red !important;
+}

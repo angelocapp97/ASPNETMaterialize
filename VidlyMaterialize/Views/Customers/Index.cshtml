@@ -31,7 +31,7 @@
                                     <tr>
                                         <td>@customer.FirstName</td>
                                         <td>@customer.LastName</td>
-                                        <td>@customer.GenderId</td>
+                                        <td>@customer.Gender.Name</td>
                                         <td>
                                             @if (@customer.IsSubscribedToNewsletter)
                                             {
@@ -52,4 +52,18 @@
             </div>
         </div>
     </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large teal lighten-2 waves-effect waves-light" href="/customers/new">
+            <i class="large material-icons">add</i>
+        </a>
+    </div>
 </div>
+
+@section scripts {
+    <script>
+        $(function () {
+            M.FloatingActionButton.init(document.querySelector('.fixed-action-btn'));
+        });
+    </script>
+}

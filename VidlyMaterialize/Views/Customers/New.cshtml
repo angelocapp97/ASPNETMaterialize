@@ -1,0 +1,66 @@
+﻿
+@model VidlyMaterialize.ViewModels.NewCustomerViewModel
+@{
+    ViewBag.Title = "Create new Customer";
+}
+
+<div class="container row">
+    <h2 class="header">@ViewBag.Title</h2>
+
+    <div class="row">
+        <div class="col s12">
+            @using (Html.BeginForm("Create", "Customers"))
+            {
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Insert customer data</span>
+                        <div class="row">
+                            <div class="input-field col s12 m4">
+                                @Html.LabelFor(m => m.Customer.FirstName, new { @class = "validate" })
+                                @Html.TextBoxFor(m => m.Customer.FirstName)
+                                @Html.ValidationMessageFor(m => m.Customer.FirstName)
+                            </div>
+                            <div class="input-field col s12 m4">
+                                @Html.LabelFor(m => m.Customer.LastName, new { @class = "validate" })
+                                @Html.TextBoxFor(m => m.Customer.LastName)
+                                @Html.ValidationMessageFor(m => m.Customer.LastName)
+                            </div>
+                            <div class="input-field col s12 m4">
+                                @Html.DropDownListFor(m => m.Customer.GenderId, new SelectList(Model.Genders, "Id", "Name"), "Select a Gender")
+                                @Html.ValidationMessageFor(m => m.Customer.GenderId)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                @Html.LabelFor(m => m.Customer.Birthdate)
+                                @Html.TextBoxFor(m => m.Customer.Birthdate, new { @class = "datepicker" })
+                            </div>
+                            <div class="input-field col s12 m6">
+                                @*<label>
+                                    @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter, new { @class = "filled-in", @checked = "checked" })
+                                    <span>Subscribe to NewsLetter</span>
+                                </label>*@
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                            Save
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(function () {
+            M.FormSelect.init(document.querySelector('select'));
+            M.Datepicker.init(document.querySelector('.datepicker'));
+        });
+    </script>
+}
+
