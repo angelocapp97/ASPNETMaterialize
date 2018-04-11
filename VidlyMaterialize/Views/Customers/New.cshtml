@@ -26,20 +26,23 @@
                                 @Html.ValidationMessageFor(m => m.Customer.LastName)
                             </div>
                             <div class="input-field col s12 m4">
-                                @Html.DropDownListFor(m => m.Customer.GenderId, new SelectList(Model.Genders, "Id", "Name"), "Select a Gender")
+                                @Html.DropDownListFor(m => m.Customer.GenderId, new SelectList(Model.Genders, "Id", "Name")@*, new { @multiple = true }*@)
+                                @Html.LabelFor(m => m.Customer.GenderId)
                                 @Html.ValidationMessageFor(m => m.Customer.GenderId)
+                                @*<input name="Customer.GenderId" type="hidden" value="" />*@
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12 m6">
                                 @Html.LabelFor(m => m.Customer.Birthdate)
-                                @Html.TextBoxFor(m => m.Customer.Birthdate, new { @class = "datepicker" })
+                                @Html.TextBoxFor(m => m.Customer.Birthdate, "{0:d MMMM yyyy}", new { @class = "datepicker" })
                             </div>
                             <div class="input-field col s12 m6">
-                                @*<label>
-                                    @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter, new { @class = "filled-in", @checked = "checked" })
-                                    <span>Subscribe to NewsLetter</span>
-                                </label>*@
+                                <label>
+                                    <input name="Customer.IsSubscribedToNewsletter" type="checkbox" class="filled-in" checked="checked" value="true" />
+                                    <span>Subscribe to Newsletter</span>
+                                </label>
+                                <input name="Customer.IsSubscribedToNewsletter" type="hidden" value="false" />
                             </div>
                         </div>
                     </div>

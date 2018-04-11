@@ -27,6 +27,7 @@ namespace VidlyMaterialize.Models
         public bool IsSubscribedToNewsletter { get; set; }
 
         [Required]
+        [Display(Name = "Gender")]
         public byte GenderId { get; set; }
         public Gender Gender { get; set; }
     }
