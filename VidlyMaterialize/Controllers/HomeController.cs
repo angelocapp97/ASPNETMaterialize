@@ -6,17 +6,26 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using VidlyMaterialize.Models;
 
 namespace VidlyMaterialize.Controllers
 {
     public class HomeController : Controller
     {
+        private VidlyMaterializeContext _context;
+
+        public HomeController()
+        {
+            _context = new VidlyMaterializeContext();
+        }
+
         public async Task<ActionResult> Index()
         {
-            var context = new IdentityDbContext<IdentityUser>();
-            var store = new UserStore<IdentityUser>(context);
-            var manager = new UserManager<IdentityUser>(store);
+            var store = new UserStore<CustomUser>(_context);
+            var manager = new UserManager<CustomUser>(store);
 
+            var name = "Angelo";
+            var surname = "Cappelletti";
             var email = "example@domain.com";
             var password = "passw0rd";
 
@@ -24,8 +33,10 @@ namespace VidlyMaterialize.Controllers
 
             if (user == null)
             {
-                user = new IdentityUser
+                user = new CustomUser
                 {
+                    FirstName = name,
+                    LastName = surname,
                     UserName = email,
                     Email = email
                 };

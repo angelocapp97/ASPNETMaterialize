@@ -5,14 +5,14 @@ namespace VidlyMaterialize.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<VidlyMaterialize.VidlyMaterializeContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<VidlyMaterialize.Models.VidlyMaterializeContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(VidlyMaterialize.VidlyMaterializeContext context)
+        protected override void Seed(VidlyMaterialize.Models.VidlyMaterializeContext context)
         {
             //  This method will be called after migrating to the latest version.
 
