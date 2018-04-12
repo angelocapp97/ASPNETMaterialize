@@ -11,11 +11,11 @@ namespace VidlyMaterialize.Controllers
 {
     public class CustomersController : Controller
     {
-        private VidlyMaterializeContext _context;
+        private ApplicationDbContext _context;
 
         public CustomersController()
         {
-            _context = new VidlyMaterializeContext();
+            _context = new ApplicationDbContext();
         }
 
         protected override void Dispose(bool disposing)

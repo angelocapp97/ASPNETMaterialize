@@ -7,16 +7,21 @@ using System.Web;
 
 namespace VidlyMaterialize.Models
 {
-    public class VidlyMaterializeContext : IdentityDbContext<CustomUser>
+    public class ApplicationDbContext : IdentityDbContext<CustomUser>
     {
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Gender> Genders { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Genre> Genres { get; set; }
 
-        public VidlyMaterializeContext() : base("VidlyMaterializeDB")
+        public ApplicationDbContext() : base("VidlyMaterializeDB")
         {
 
+        }
+
+        public static ApplicationDbContext Create()
+        {
+            return new ApplicationDbContext();
         }
     }
 

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model VidlyMaterialize.ViewModels.BaseViewModel
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,7 +18,7 @@
 <body>
     @Html.Partial("_Navbar")
 
-    @Html.Partial("_Sidebar")
+    @Html.Partial("_Sidebar", Model)
 
     <div class="container-fluid body-content">
         @RenderBody()
